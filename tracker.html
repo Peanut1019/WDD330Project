@@ -11,20 +11,25 @@
 <body>
     <header id="header"></header>
     <main>
+        <div class="moodForm">
         <form>
             <legend>How Are You Today?</legend>
-            <label for="happy">Happy<input type="radio" id="happy" name="moods" value="happy"></label>
-            <label for="sad">Sad<input type="radio" id="sad" name="moods" value="sad"></label>
-            <label for="stressed">Stressed<input type="radio" id="stressed" name="moods" value="stressed"></label>
-            <label for="mad">Mad<input type="radio" id="mad" name="moods" value="mad"></label>
-            <label for="excited">Excited<input type="radio" id="`excited" name="moods" value="excited"></label>
-            <label for="meh">Meh<input type="radio" id="meh" name="moods" value="meh"></label>
+            <label><input type="radio" id="happy" name="moods" value="happy">Happy</label>
+            <label><input type="radio" id="sad" name="moods" value="sad">Sad</label>
+            <label><input type="radio" id="stressed" name="moods" value="stressed">Stressed</label>
+            <label><input type="radio" id="mad" name="moods" value="mad">Mad</label>
+            <label><input type="radio" id="`excited" name="moods" value="excited">Excited</label>
+            <label><input type="radio" id="meh" name="moods" value="meh">Meh</label>
+            <input type="submit" id="moodSub">
         </form>
+        </div>
+        <div id="moodImg">
         <img src="./img/moodbanner.webp" alt="Mood Image">
-        <p>You were <span id="moody"></span> yesterday</p>
-        </main>
+        <pre id="log"></pre>
+    </div>
+    </main>
     <footer id="footer"></footer>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/tracker.js"></script>
 </body>
 </html>
 <!-- Mobile Home: https://wireframe.cc/NK2fNL 

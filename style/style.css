@@ -12,6 +12,7 @@
     --secondary-color: #384D48;
     --tertiary-color: #C2A83E;
     --light: #F2F2F2;
+    --light-grey: #DBD7C7;
     --dark-grey: #171D1C;
   
     /* sizes */
@@ -39,8 +40,59 @@
   }
   header {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-items: center;
     padding: 0 10px;
+    background-color: var(--light-grey);
+  }
+  button {
+    color: var(--light);
+    background-color: var(--secondary-color);
+  }
+  .logo {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 125px;
+    justify-items: center;
+  }
+  .logo img {
+    height: 125px;
+    grid-column: 1/2;
+  }
+  .logo a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-size: var(--large-font);
+    font-family: var(--font-headline);
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .logo a:hover {
+    text-decoration: underline;
+    color: var(--tertiary-color);
+  }
+  nav {
+    position: absolute;
+    top: 65px;
+    left: 75px;
+    text-align: center;
+    width: 75%
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    list-style-type: none;
+    
+  }
+  li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    grid-row: 1/2;
+    grid-column: auto;
+  }
+  li a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
   }
 .hero {
     background-color: var(--primary-color);
@@ -74,7 +126,7 @@
     display: grid;
     grid-template-columns: 25% 50% 25%;
     background-color: var(--light);
-    padding: 7px;
+    padding: 10px;
   }
   .explain img {
     height: 200px;
@@ -95,7 +147,8 @@
     grid-row: 1/2;
     justify-content: center;
     background-color: var(--light);
-    color: #384D48;
+    color: var(--dark-grey);
+    background-color: var(--tertiary-color);
   }
   #destroy {
     height: fit-content;
@@ -116,6 +169,10 @@
     background-color: var(--tertiary-color);
     color: var(--dark-grey);
     text-align: center;
+  }
+  #save {
+    color: var(--light);
+    background-color: var(--secondary-color);
   }
   h2 {
     grid-column: 2/3;
@@ -138,4 +195,22 @@
     font-size: larger;
     font-family: var(--font-body);
   }
-  
+  .moodForm {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    text-align: center;
+    font-size: var(--large-font);
+  }
+  #moodImg {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: var(--large-font);
+  }
+  #log {
+    font-family: var(--font-body);
+    font-size: var(--small-font);
+  }
+  footer {
+    background-color: var(--tertiary-color);
+  }
