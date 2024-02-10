@@ -1,6 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Satisfy&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Satisfy&display=swap');
 /* .satisfy-regular {
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-style: normal;
   } */
+:root {
+    --font-body: "Merienda", Helvetica, sans-serif;
+    --font-headline: "Satisfy", sans-serif;
+    /* colors */
+    --primary-color: #AD4D1F;
+    --secondary-color: #384D48;
+    --tertiary-color: #C2A83E;
+    --light: #F2F2F2;
+    --dark-grey: #171D1C;
+  
+    /* sizes */
+    --font-base: 16px;
+    --small-font: 0.8em;
+    --large-font: 1.4em;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    color: var(--dark-grey);
+    background-color: var(--light);
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--light);
+    justify-content: center;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+.hero {
+    background-color: var(--primary-color);
+    max-height: 400px;
+    width:auto;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .hero img {
+    grid-column: 2/3;
+    max-width: fit-content;
+  }
+  .mission {
+    background-color: var(--primary-color);
+    height: auto;
+    width:auto;
+    justify-content: center;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: larger;
+    color: var(--dark-grey);
+  }
+  .explain {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    background-color: var(--light);
+    padding: 7px;
+  }
+  .explain img {
+    height: 200px;
+    width: auto;
+    grid-column: auto;
+    border: var(--dark-grey) solid 2px;
+  }
+  .explain p {
+    grid-column: 2/3;
+    text-align: center;
+    color: var(--dark-grey);
+    font-size: larger;
+  }
+  #formDes {
+    height: auto;
+    width: auto;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-content: center;
+    background-color: var(--light);
+    color: #384D48;
+  }
+  #destroy {
+    height: fit-content;
+    width: fit-content;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: relative;
+    bottom: 38px;
+    left: 60px; 
+  }
+  .last {
+    grid-column: 2/3;
+    justify-content: center;
+  }
+  #reverse {
+    height: 300px;
+    width:auto;
+    background-color: var(--tertiary-color);
+    color: var(--dark-grey);
+    text-align: center;
+  }
+  h2 {
+    grid-column: 2/3;
+    text-align: center;
+    font-family: var(--font-headline);
+    font-size:xx-large;
+  }
+  #aff {
+    height: 400px;
+    width: auto;
+    grid-column: 1/4;
+    background-color: var(--primary-color);
+  }
+  #more {
+    grid-column: 2/3;
+    width: 100%;
+    height: fit-content;
+    margin-top: 5px;
+    justify-content: center;
+    font-size: larger;
+    font-family: var(--font-body);
+  }
+  

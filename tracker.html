@@ -11,29 +11,20 @@
 <body>
     <header id="header"></header>
     <main>
-       
-       <section class="last">
-        <div id="reverse">
-            <h3>Last Entry:</h3>
-        </div>
-        <button id="des">Destroy It!</button>
-        <button id="reader">Read More Entries</button>
-       </section>
-       <section id="formDes">
-       <form>
-        <fieldset>
-            <legend>Entry:</legend>
-            <label id="initials">Initials: <input type="text" name="initials" required></label><br>
-            <label id="date">Date: <input type="date" name="date" required></label><br>
-            <label id="entry">Write the Rest:<input type="text" name="entry" required></label>
-          </fieldset>
-          <input type="submit" id="save">
-       </form>
-       <button id="destroy">Destroy</button>
-    </section>
-    </main>
+        <form>
+            <legend>How Are You Today?</legend>
+            <label for="happy">Happy<input type="radio" id="happy" name="moods" value="happy"></label>
+            <label for="sad">Sad<input type="radio" id="sad" name="moods" value="sad"></label>
+            <label for="stressed">Stressed<input type="radio" id="stressed" name="moods" value="stressed"></label>
+            <label for="mad">Mad<input type="radio" id="mad" name="moods" value="mad"></label>
+            <label for="excited">Excited<input type="radio" id="`excited" name="moods" value="excited"></label>
+            <label for="meh">Meh<input type="radio" id="meh" name="moods" value="meh"></label>
+        </form>
+        <img src="./img/moodbanner.webp" alt="Mood Image">
+        <p>You were <span id="moody"></span> yesterday</p>
+        </main>
     <footer id="footer"></footer>
-    <script type="module" src="./js/animation.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
 <!-- Mobile Home: https://wireframe.cc/NK2fNL 
