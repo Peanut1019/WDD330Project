@@ -2,23 +2,22 @@ import { getLocalStorage, setLocalStorage } from "./tools.mjs";
 const initials = document.getElementById("initials");
 const date = document.getElementById("date");
 const entry = document.getElementById("entry");
-getLocalStorage(initials);
-button.addEventListener('click', () => { 
-   displayEntry();
-    
- });
+export default class Entries {
+constructor(){
+this.initials = initials;
+this.date = date;
+this.entry = entry;
+}
+init() {
+  this.list = getLocalStorage(this.initials)
+}
 
-
- function displayEntry() {
-    const elem = this.renderEntrySummary();
-    document.getElementById("reverse").innerHTML = elem;
-  }
-
-  function renderEntrySummary() {
+renderEntrySummary() {
       const newEntry = `<h3>${initials}</h3>
       <p>Date: ${date}</p>
       <p>Entry: ${entry}</p>`;
-
+      setLocalStorage(initials, newEntry);
       return newEntry;
   }
-setLocalStorage(initials, newEntry);
+
+}

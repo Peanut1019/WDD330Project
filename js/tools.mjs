@@ -8,7 +8,7 @@ export function renderWithTemplate(parentElement, data, position = "afterbegin",
 
   
 export async function loadTemplate(path) {
-  const res = await fetch( path);
+  const res = await fetch("https://peanut1019.github.io/WDD330Project" + path);
   const template = await res.text();
   return template;
 }

@@ -159,7 +159,7 @@
     bottom: 38px;
     left: 60px; 
   }
-  .last {
+  #last {
     grid-column: 2/3;
     justify-content: center;
   }
@@ -173,6 +173,18 @@
   #save {
     color: var(--light);
     background-color: var(--secondary-color);
+  }
+  #expl {
+    height: 100px;
+    grid-column: 2/3;
+    justify-content: center;
+  }
+  #expl img {
+    max-width: 400px;
+    position: absolute;
+  }
+  #stop {
+    position: relative;
   }
   h2 {
     grid-column: 2/3;
