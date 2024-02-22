@@ -1,32 +1,35 @@
 import { loadHeaderFooter } from "./tools.mjs";
 loadHeaderFooter();
-var category = 'happiness'
-$.ajax({
+const message = document.getElementById("message");
+let outputElement = '';
+const apiUrl = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
+const apiKey = 'sXSo8OXgXPlPuosqzSnPkw==m9Cryb7bED6KDGoZ';
+const requestOptions = {
     method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
-    headers: { 'X-Api-Key': 'sXSo8OXgXPlPuosqzSnPkw==m9Cryb7bED6KDGoZ'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
+    headers: {
+      'X-Api-Key': `${apiKey}`,
     },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
+  };
+  const again = () => {
+  fetch(apiUrl, requestOptions)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+       outputElement = JSON.stringify(data, null, 1);
+       displayMessage(outputElement);
+    // console.log(data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+};
+function displayMessage(data) {
+        message.textContent = `${data}`;
+        
     }
-});
-// async function apiFetch() {
-//     try {
-//         const response = await fetch(url);
-//         if (response.ok) {
-//             const data = await response.json();
-//             document.getElementById("message") = print(response.json())
-// 			console.log(data);
-//         }
-//         else {
-//             throw Error(await response.text());
-//         }
-//     }
-//     catch (error) {
-//         console.log(error);
-//     }
-// }
-// apiFetch();
+    again();
+    document.getElementById("more").addEventListener("click", again);
