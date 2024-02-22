@@ -9,7 +9,7 @@ const enter = new Entries();
 enter.renderEntrySummary();
 
   const destroy = () => {
-    formDes.innerHTML =`<div id="expl"><img src="../img/explosion.webp" alt="Explosion"><button id="stop">Stop!</button></div>`;
+    formDes.innerHTML =`<div id="expl"><img src="https://peanut1019.github.io/WDD330Project/img/explosion.webp" alt="Explosion"><button id="stop">Stop!</button></div>`;
     document.getElementById("expl").animate([{ transform: "translate(-50%, -50%) scale(.5)" }, { transform: "translate(-50%, -50%) scale(1.5)" }],
     {
         duration: 1500, 
@@ -20,7 +20,7 @@ enter.renderEntrySummary();
   document.getElementById("stop").addEventListener("click", retcon);
   };
   const destroyLast = () => {
-    last.innerHTML = `<div id="expl"><img src="../img/explosion.webp" alt="Explosion"><button id="stop">Stop!</button></div>`;
+    last.innerHTML = `<div id="expl"><img src="https://peanut1019.github.io/WDD330Project/img/explosion.webp" alt="Explosion"><button id="stop">Stop!</button></div>`;
     document
   .getElementById("expl").animate([{ transform: "translate(-50%, -50%) scale(.5)" }, { transform: "translate(-50%, -50%) scale(2)" }],
     {
